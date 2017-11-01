@@ -1,4 +1,3 @@
-val play = "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.2"
 
 lazy val commonSettings = Seq(
     organization := "com.example",
@@ -10,7 +9,10 @@ lazy val root = (project in file("."))
   .enablePlugins(PlayScala)
   .settings(
     commonSettings,
-    name := "playframework-demo",
-    libraryDependencies += play,
+    name := "backend-demo",
+    libraryDependencies ++= Seq(
+      "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.2" % Test,
+      "com.typesafe.akka" %% "akka-actor" % "2.5.4"
+    ),
     resolvers += Resolver.sonatypeRepo("snapshots")
   )
