@@ -13,8 +13,6 @@ import scala.concurrent.ExecutionContext
 import scala.concurrent.duration._
 import actors.TestActor
 
-trait MyExecutionContext extends ExecutionContext
-
 class Test @Inject()(system: ActorSystem,
                      cc: ControllerComponents)
   (implicit ec: ExecutionContext) extends AbstractController(cc) {
