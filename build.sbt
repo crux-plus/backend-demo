@@ -10,6 +10,7 @@ lazy val root = (project in file("."))
     commonSettings,
     name := "backend-demo",
     libraryDependencies ++= Seq(
+      guice,
       "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.2" % Test,
       "com.typesafe.akka" %% "akka-actor" % "2.5.4"
     ),
