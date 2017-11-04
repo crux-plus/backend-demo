@@ -16,8 +16,7 @@ import actors.TestActor
 trait MyExecutionContext extends ExecutionContext
 
 class Test @Inject()(system: ActorSystem,
-                    cc: ControllerComponents
-                    )
+                     cc: ControllerComponents)
   (implicit ec: ExecutionContext) extends AbstractController(cc) {
 
   implicit val timeout: Timeout = 5.seconds
